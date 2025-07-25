@@ -2,14 +2,14 @@
 // changing the active button
 
 
-const activeClasses = 'px-4 py-2 w-30 text-white rounded-md bg-gradient-to-r from-blue-700 to-violet-700';
+const activeClasses = 'px-3 py-1.5 w-38 text-white rounded-md bg-gradient-to-r from-blue-700 to-violet-700';
 const chosNav = document.querySelectorAll('.navbtn');
 
 const content = document.querySelectorAll('.content');
 
 chosNav.forEach(nav => {
   nav.addEventListener('click', () => {
-    chosNav.forEach(otherBtn => otherBtn.className = 'navbtn');
+    chosNav.forEach(otherBtn => otherBtn.className = 'navbtn px-3 py-1.5 w-38');
     nav.className = `navbtn ${activeClasses}`;
 
     content.forEach(cont => cont.classList.add('hidden'));
@@ -26,6 +26,11 @@ chosNav.forEach(nav => {
   });
 });
 
+
+const fromValue = document.getElementById('fromValue');
+const fromUnit = document.getElementById('fromUnit');
+const toUnit = document.getElementById('toUnit');
+const toValue = document.getElementById('toValue');
 
 
 class Converter {
