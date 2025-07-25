@@ -25,3 +25,35 @@ chosNav.forEach(nav => {
     
   });
 });
+
+
+
+class Converter {
+    constructor() {
+        this.factors = {
+            length: {
+                km: 1000,
+                m: 1,
+                cm: 0.01,
+                mi: 1609.34,
+                ft: 0.3048,
+                in: 0.0254
+            },
+            weight: {
+                kg: 1,
+                g: 0.001,
+                lb: 0.453592,
+                oz: 0.0283495
+            },
+            time: {
+                day: 86400,
+                hr: 3600,
+                min: 60,
+                sec: 1
+            }
+        };
+    }
+  }
+
+
+
